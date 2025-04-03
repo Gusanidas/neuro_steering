@@ -100,7 +100,6 @@ class AlignedNeuralData(AlignedIterator):
         if voxel_idx < 0 or voxel_idx >= self.n_voxels:
             raise ValueError(f"Voxel index {voxel_idx} out of range (0-{self.n_voxels-1})")
         
-        # Convert the tensor slice back to numpy for backward compatibility
         return self.data[:, voxel_idx].numpy()
     
     
@@ -198,7 +197,6 @@ class AlignedNeuralData(AlignedIterator):
         )
 
 if __name__ == "__main__":
-    # Example usage
     story_name = "black"
     subject = "sub001"
     region = "temporal"
@@ -212,7 +210,6 @@ if __name__ == "__main__":
     print(f"Testing AlignedNeuralData with story: {story_name}, subject: {subject}, region: {region}")
     
     try:
-        # Build the AlignedNeuralData object
         neural_data = AlignedNeuralData.build_from_file(
             story_name=story_name,
             subject=subject,
@@ -223,7 +220,6 @@ if __name__ == "__main__":
             base_dir=base_dir
         )
         
-        # Print basic information about the object
         print(f"\nSuccessfully created AlignedNeuralData object:")
         print(f"  - Story: {neural_data.story_name}")
         print(f"  - Subject: {neural_data.subject}")

@@ -55,7 +55,34 @@ def map_region_to_harvard_oxford(region: str, atlas) -> Dict[str, int]:
         ], 
         'wernicke' : [
             'Superior Temporal Gyrus, posterior division',  # Wernicke's area
-        ]
+        ],
+        'auditory': [
+            'Planum Polare',
+            'Primary Auditory Cortex (Heschl\'s Gyrus)'
+        ],
+        'memory': [
+            'Hippocampus',
+            'Parahippocampal Cortex',
+            'Entorhinal Cortex'
+        ],
+        'semantic': [
+            'Anterior Temporal Lobes (ATL)',
+            'Inferior Parietal Lobule (IPL)'
+        ],
+        'executive_attention': [
+            'Dorsolateral Prefrontal Cortex (DLPFC)',
+            'Anterior Cingulate Cortex (ACC)'
+        ],
+        'social_cognition': [
+            'Medial Prefrontal Cortex (mPFC)',
+            'Posterior Cingulate Cortex (PCC)',
+            'Temporo-Parietal Junction (TPJ)'
+        ],
+        'emotion': [
+            'Amygdala',
+            'Insula'
+        ],
+        
     }
 
     # Default to empty if region not found
