@@ -55,7 +55,46 @@ def map_region_to_harvard_oxford(region: str, atlas) -> Dict[str, int]:
         ], 
         'wernicke' : [
             'Superior Temporal Gyrus, posterior division',  # Wernicke's area
-        ]
+        ],
+        'auditory': [
+            'Planum Polare',
+            'Primary Auditory Cortex (Heschl\'s Gyrus)'
+        ],
+        'memory': [
+            'Hippocampus',
+            'Parahippocampal Cortex',
+            'Entorhinal Cortex'
+        ],
+        'semantic': [
+            'Anterior Temporal Lobes (ATL)',
+            'Inferior Parietal Lobule (IPL)'
+        ],
+        'subcortical': [
+         'Thalamus',
+         'Caudate',             # Part of Basal Ganglia / Striatum
+         'Putamen',            # Part of Basal Ganglia / Striatum
+         'Pallidum',           # Part of Basal Ganglia
+         'Hippocampus',        # Already in 'memory' but useful standalone or in a broader 'limbic' group
+         'Amygdala',           # Key for emotion processing
+         'Accumbens'           # Part of reward circuitry
+     ],
+     # Or more specific basal ganglia grouping:
+     'basal_ganglia': [
+         'Caudate',
+         'Putamen',
+        'Pallidum',
+         'Accumbens' # Nucleus Accumbens is often grouped here
+        ],
+        'limbic': [
+         'Hippocampus',
+         'Amygdala',
+         'Parahippocampal Gyrus, anterior division', # Often includes Entorhinal cortex functionally
+         'Parahippocampal Gyrus, posterior division',
+         'Cingulate Gyrus, anterior division',
+         'Cingulate Gyrus, posterior division',
+         'Temporal Pole', # Connects closely with limbic structures
+         # 'Fornix' is anatomically part of it, but often not a standard HO label
+     ],
     }
 
     # Default to empty if region not found
